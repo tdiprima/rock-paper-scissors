@@ -21,11 +21,11 @@ jobs:
       - name: Checkout main branch from GitHub
         uses: actions/checkout@v4
 
-      - name: Set up JDK 21
+      - name: Set up JDK
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin' # You can choose temurin, zulu, adopt, etc.
-          java-version: 21
+          java-version: '11' # Specify the JDK version
 
       - name: Build Maven Project
         run: |
