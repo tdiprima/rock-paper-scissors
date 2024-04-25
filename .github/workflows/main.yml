@@ -25,7 +25,6 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-#          java-version: 21.0.2+13.0.LTS
           java-version: 8.0.302+8
 
       - name: Build Maven Project
