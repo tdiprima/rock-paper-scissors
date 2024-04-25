@@ -21,11 +21,12 @@ jobs:
       - name: Checkout main branch from GitHub
         uses: actions/checkout@v4
 
-      - name: Set up JDK 1.8
+      - name: Set up JDK
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: 1.8
+          java-version: 21.0.2+13.0.LTS
+#          java-version: 18.0.0+36
 
       - name: Build Maven Project
         run: |
