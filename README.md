@@ -1,6 +1,12 @@
-## setup-java
-
 <!-- set up a GitHub Actions workflow to automatically build a JAR file and attach it to a GitHub release when you create one -->
+
+## Run manually
+
+```yaml
+on: workflow_dispatch
+```
+
+## Setup Java Action
 
 Starting from version 2, `actions/setup-java` requires you to specify the `distribution` of Java that you want to use. This is part of the action's setup to allow more flexibility in choosing different Java distributions like Adoptium, Zulu, etc.
 
