@@ -1,4 +1,5 @@
 <!-- set up a GitHub Actions workflow to automatically build a JAR file and attach it to a GitHub release when you create one -->
+# GitHub Actions
 
 ## Run manually
 
