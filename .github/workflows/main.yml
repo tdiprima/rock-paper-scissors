@@ -19,6 +19,6 @@ jobs:
 
       - name: '📦 Upload Package'
         run: gh release upload ${{github.event.release.tag_name}} roshambo-0.0.1.jar
-    env:
-      GITHUB_TOKEN: ${{ github.TOKEN }}
-    shell: bash
+        env:
+          GITHUB_TOKEN: ${{ github.TOKEN }}
+        shell: bash
