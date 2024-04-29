@@ -18,7 +18,7 @@ jobs:
         run: mvn -B package --file pom.xml
 
       - name: '📦 Upload Package'
-        run: gh release upload ${{github.event.release.tag_name}} target/roshambo-0.0.1.jar
+        run: gh release upload ${{github.event.release.tag_name}} target/*.jar
         env:
           GITHUB_TOKEN: ${{ github.TOKEN }}
         shell: bash
