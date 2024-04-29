@@ -7,6 +7,13 @@
 on: workflow_dispatch
 ```
 
+```yaml
+on:
+  release:
+    types: [created]
+  workflow_dispatch:
+```
+
 ## Setup Java Action
 
 Starting from version 2, `actions/setup-java` requires you to specify the `distribution` of Java that you want to use. This is part of the action's setup to allow more flexibility in choosing different Java distributions like Adoptium, Zulu, etc.
