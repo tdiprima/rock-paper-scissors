@@ -31,7 +31,7 @@
                     <appVersion>${project.version}</appVersion>
                     <vendor>Stony Brook University - Biomedical Informatics</vendor>
                     <input>target</input>
-                    <mainJar>rock-paper-scissors-${project.version}.jar</mainJar>
+                    <mainJar>roshambo-${project.version}.jar</mainJar>
                     <verbose>true</verbose>
                     <description>Rock Paper Scissors</description>
                     <destination>dist</destination>
@@ -43,7 +43,7 @@
                     <execution>
                         <id>win</id>
                         <configuration>
-                            <installDir>\HelloSpringBoot</installDir>
+                            <installDir>\rock-paper-scissors</installDir>
                             <winMenu>true</winMenu>
                             <winShortcutPrompt>true</winShortcutPrompt>
                             <winDirChooser>true</winDirChooser>
