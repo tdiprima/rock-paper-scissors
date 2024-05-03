@@ -1,22 +1,80 @@
 <project>
-	<modelVersion>4.0.0</modelVersion>
-	<!-- interesting -->
-	<groupId>com.mcnz.rps</groupId>
-	<artifactId>roshambo</artifactId>
-	<version>0.0.1</version>
-	<packaging>jar</packaging>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.mcnz.rps</groupId>
+    <artifactId>roshambo</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
 
-	<name>roshambo</name>
+    <name>roshambo</name>
 
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
-	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.11</version>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.panteleyev</groupId>
+                <artifactId>jpackage-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <configuration>
+                    <name>rock-paper-scissors</name>
+                    <appVersion>${project.version}</appVersion>
+                    <vendor>Stony Brook University - Biomedical Informatics</vendor>
+                    <input>target</input>
+                    <mainJar>rock-paper-scissors-${project.version}.jar</mainJar>
+                    <verbose>true</verbose>
+                    <description>Rock Paper Scissors</description>
+                    <destination>dist</destination>
+                    <javaOptions>
+                        <option>-Dfile.encoding=UTF-8</option>
+                    </javaOptions>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>win</id>
+                        <configuration>
+                            <installDir>\HelloSpringBoot</installDir>
+                            <winMenu>true</winMenu>
+                            <winShortcutPrompt>true</winShortcutPrompt>
+                            <winDirChooser>true</winDirChooser>
+                            <winConsole>true</winConsole>
+                            <type>MSI</type>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>mac</id>
+                        <configuration>
+                            <installDir>/Applications</installDir>
+                            <type>DMG</type>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>ubuntu</id>
+                        <configuration>
+                            <installDir>/usr/local</installDir>
+                            <type>DEB</type>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>rhel</id>
+                        <configuration>
+                            <installDir>/usr/local</installDir>
+                            <type>RPM</type>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
