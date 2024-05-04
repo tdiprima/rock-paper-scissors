@@ -1,3 +1,16 @@
+# Build jar
+
+```sh
+mvn clean package
+```
+
+# JPackage
+
+```sh
+cd target
+jpackage --type dmg --input . --dest . --main-jar ./roshambo-1.0.0.jar --main-class com.mcnz.rps.DesktopGame
+```
+
 <!-- set up a GitHub Actions workflow to automatically build a JAR file and attach it to a GitHub release when you create one -->
 # GitHub Actions
 
